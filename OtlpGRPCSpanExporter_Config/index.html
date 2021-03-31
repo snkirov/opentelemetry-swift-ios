@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenTelemetry Swift - OtlpGRPCSpanExporter.Config</title>
+    <link rel="stylesheet" type="text/css" href="/opentelemetry-swift/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/opentelemetry-swift/">
+            <strong>
+                OpenTelemetry Swift
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#otlpgrpcspanexporter.config.init(eventloopgroup:host:port:logger:)">init(event​Loop​Group:​host:​port:​logger:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Otlp​GRPCSpan​Exporter.​Config</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Config</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Configures an <code>OtlpGRPCSpanExporter</code> through arguments and environment variables.</p>
+
+</div>
+<div class="discussion">
+    <h2>Priority</h2>
+
+<p>Arguments passed to the initializer have a <strong>higher priority</strong> than environment variables.</p>
+
+<h2>Environment variables</h2>
+
+<p>The following environment variables may be used to configure the exporter instead of specifying them in code:</p>
+
+<ul>
+<li>
+<p><code>OTEL_EXPORTER_OTLP_ENDPOINT</code>: Must be a valid URL which contains both host and port of the OTel collector.</p>
+</li>
+</ul>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="class"><code><a href="/opentelemetry-swift/OtlpGRPCSpanExporter">OtlpGRPCSpanExporter</a></code></dt>
+<dd><p>A span exporter which sends spans to an OTel collector via gRPC in the OpenTelemetry protocol (OTLP).</p>
+</dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="otlpgrpcspanexporter.config.init(eventloopgroup:host:port:logger:)">
+    <h3>
+        <code>init(event​Loop​Group:​host:​port:​logger:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">eventLoopGroup</span>: <span class="type">EventLoopGroup</span>, <span class="variable">host</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">port</span>: <span class="type">UInt</span>? = <span class="keyword">nil</span>, <span class="variable">logger</span>: <span class="type">Logger</span> = <span class="variable">Logger</span>(<span class="variable">label</span>: <span class="string literal">"</span><span class="string literal">OtlpGRPCSpanExporter</span><span class="string literal">"</span>))</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Initialize a configuration to pass to an <code>OtlpGRPCSpanExporter</code>.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>event​Loop​Group</th>
+    <td><code class="type">Event​Loop​Group</code></td>
+    <td><p>The event loop group the gRPC client connection should be running on.</p>
+</td>
+</tr>
+<tr>
+    <th>host</th>
+    <td><code class="type">String?</code></td>
+    <td><p>The OTel collector host, defaults to <code>localhost</code> if not provided and <code>OTEL_EXPORTER_OTLP_ENDPOINT</code> is not set.</p>
+</td>
+</tr>
+<tr>
+    <th>port</th>
+    <td><code class="type">UInt?</code></td>
+    <td><p>The OTel collector port, defaults to <code>4317</code> if not provided and <code>OTEL_EXPORTER_OTLP_ENDPOINT</code> is not set.</p>
+</td>
+</tr>
+<tr>
+    <th>logger</th>
+    <td><code class="type">Logger</code></td>
+    <td><p>The logger to be used, defaults to &quot;OtlpGRPCSpanExporter&quot;.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-03-31T19:40:47+0000">March 31, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

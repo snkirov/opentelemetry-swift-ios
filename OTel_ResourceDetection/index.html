@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenTelemetry Swift - OTel.ResourceDetection</title>
+    <link rel="stylesheet" type="text/css" href="/opentelemetry-swift/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/opentelemetry-swift/">
+            <strong>
+                OpenTelemetry Swift
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#otel.resourcedetection.automatic">automatic</a></li><li class="case"><a href="#otel.resourcedetection.manual">manual</a></li><li class="case"><a href="#otel.resourcedetection.none">none</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Enumeration</small>
+    <code class="name">OTel.​Resource​Detection</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">ResourceDetection</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Configures how resource attributes may be detected.</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="class"><code><a href="/opentelemetry-swift/OTel">OTel</a></code></dt>
+<dd><p>The main entry point to using OpenTelemetry.</p>
+</dd>
+</dl>
+</section>
+    <section id="enumeration cases">
+        <h2>Enumeration Cases</h2>
+
+        <div role="article" class="case" id="otel.resourcedetection.automatic">
+    <h3>
+        <code>automatic</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">automatic</span>(<span class="variable">additionalDetectors</span>: [<a href="/opentelemetry-swift/OTelResourceDetector"><span class="type">OTelResourceDetector</span></a>])</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Automatically detect resource attributes based on the process, environment, and any given additional detectors.</p>
+
+</div>
+</div>
+<div role="article" class="case" id="otel.resourcedetection.manual">
+    <h3>
+        <code>manual</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">manual</span>(: <span class="type">Resource</span>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Uses the given resource as the single source of truth.</p>
+
+</div>
+</div>
+<div role="article" class="case" id="otel.resourcedetection.none">
+    <h3>
+        <code>none</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">none</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Does not detect any attributes, i.e. results in an empty <code>OTel.Resource</code>.</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-03-31T19:40:47+0000">March 31, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenTelemetry Swift - OTel.SamplingResult</title>
+    <link rel="stylesheet" type="text/css" href="/opentelemetry-swift/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/opentelemetry-swift/">
+            <strong>
+                OpenTelemetry Swift
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#otel.samplingresult.init(decision:attributes:)">init(decision:​attributes:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#otel.samplingresult.decision">decision</a></li><li class="variable"><a href="#otel.samplingresult.attributes">attributes</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">OTel.​Sampling​Result</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">SamplingResult</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The result of asking a sampler whether a given span should be sampled.</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="class"><code><a href="/opentelemetry-swift/OTel">OTel</a></code></dt>
+<dd><p>The main entry point to using OpenTelemetry.</p>
+</dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="otel.samplingresult.init(decision:attributes:)">
+    <h3>
+        <code>init(decision:​attributes:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">decision</span>: <span class="type">SamplingDecision</span>, <span class="variable">attributes</span>: <span class="type">SpanAttributes</span> = [:])</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Initialize a sampling result with the given decision and attributes.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>decision</th>
+    <td><code class="type">Sampling​Decision</code></td>
+    <td><p>The sampling decision.</p>
+</td>
+</tr>
+<tr>
+    <th>attributes</th>
+    <td><code class="type">Span​Attributes</code></td>
+    <td><p>Additional attributes to be included in the span's attributes, defaults to no attributes.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="otel.samplingresult.decision">
+    <h3>
+        <code>decision</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">decision</span>: <span class="type">SamplingDecision</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The resulting sampling decision.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="otel.samplingresult.attributes">
+    <h3>
+        <code>attributes</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">attributes</span>: <span class="type">SpanAttributes</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Additional attributes that will be included in the span's attributes.</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-03-31T19:40:47+0000">March 31, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

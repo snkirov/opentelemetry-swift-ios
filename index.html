@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenTelemetry Swift - OpenTelemetry Swift</title>
+    <link rel="stylesheet" type="text/css" href="/opentelemetry-swift/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/opentelemetry-swift/">
+            <strong>
+                OpenTelemetry Swift
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#classes">Classes</a></li><li><a href="#structures">Structures</a></li><li><a href="#enumerations">Enumerations</a></li><li><a href="#protocols">Protocols</a></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+                <section id="classes">
+        <h2>Classes</h2>
+        <dl>
+            <dt class="class">
+    <a href="/opentelemetry-swift/OTel" title="class - OTel">
+        OTel
+    </a>
+</dt>
+<dd>
+    <p>The main entry point to using OpenTelemetry.</p>
+
+</dd>
+<dt class="class">
+    <a href="/opentelemetry-swift/OtlpGRPCSpanExporter" title="class - OtlpGRPCSpanExporter">
+        Otlp​GRPCSpan​Exporter
+    </a>
+</dt>
+<dd>
+    <p>A span exporter which sends spans to an OTel collector via gRPC in the OpenTelemetry protocol (OTLP).</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="structures">
+        <h2>Structures</h2>
+        <dl>
+            <dt class="structure">
+    <a href="/opentelemetry-swift/OTel_NoOpSpanExporter" title="structure - OTel.NoOpSpanExporter">
+        OTel.​NoOpSpan​Exporter
+    </a>
+</dt>
+<dd>
+    <p>A no-op span exporter that simply ignores the given spans and always succeeds.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_NoOpSpanProcessor" title="structure - OTel.NoOpSpanProcessor">
+        OTel.​NoOpSpan​Processor
+    </a>
+</dt>
+<dd>
+    <p>A no-op span processor that simply ignores the given spans.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_SimpleSpanProcessor" title="structure - OTel.SimpleSpanProcessor">
+        OTel.​Simple​Span​Processor
+    </a>
+</dt>
+<dd>
+    <p>A span processor that simply forwards all <em>sampled</em> spans to a given exporter.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_W3CPropagator" title="structure - OTel.W3CPropagator">
+        OTel.​W3CPropagator
+    </a>
+</dt>
+<dd>
+    <p>A propagator which operates on HTTP headers using the <a href="https://www.w3.org/TR/2020/REC-trace-context-1-20200206/">W3C TraceContext</a>.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_W3CPropagator_TraceParentParsingError" title="structure - OTel.W3CPropagator.TraceParentParsingError">
+        OTel.​W3CPropagator.​Trace​Parent​Parsing​Error
+    </a>
+</dt>
+<dd>
+    <p>An error that might occur during the parsing of the traceparent header.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_W3CPropagator_TraceStateParsingError" title="structure - OTel.W3CPropagator.TraceStateParsingError">
+        OTel.​W3CPropagator.​Trace​State​Parsing​Error
+    </a>
+</dt>
+<dd>
+    <p>An error that might occur during the parsing of the traceparent header.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_RandomIDGenerator" title="structure - OTel.RandomIDGenerator">
+        OTel.​Random​IDGenerator
+    </a>
+</dt>
+<dd>
+    <p>Generates random trace and span ids using a <code>RandomNumberGenerator</code>.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_RecordedSpan" title="structure - OTel.RecordedSpan">
+        OTel.​Recorded​Span
+    </a>
+</dt>
+<dd>
+    <p>Holds the read-only data collected during the lifetime of a span, typically created right after a span was ended.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_Resource" title="structure - OTel.Resource">
+        OTel.​Resource
+    </a>
+</dt>
+<dd>
+    <p>A resource represents the entity being traced.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_ConstantSampler" title="structure - OTel.ConstantSampler">
+        OTel.​Constant​Sampler
+    </a>
+</dt>
+<dd>
+    <p>A sampler that always returns either <code>OTel.SamplingDecision.recordAndSampled</code> or <code>OTel.SamplingDecision.drop</code>
+based on configuration.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_ParentBasedSampler" title="structure - OTel.ParentBasedSampler">
+        OTel.​Parent​Based​Sampler
+    </a>
+</dt>
+<dd>
+    <p>A sampler composed of multiple configurable samplers which are called based on whether
+the parent span is remote and/or sampled, or doesn't exist.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_SamplingResult" title="structure - OTel.SamplingResult">
+        OTel.​Sampling​Result
+    </a>
+</dt>
+<dd>
+    <p>The result of asking a sampler whether a given span should be sampled.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_SpanContext" title="structure - OTel.SpanContext">
+        OTel.​Span​Context
+    </a>
+</dt>
+<dd>
+    <p>A <code>SpanContext</code> represents the portion of a <code>Span</code> which must be serialized and propagated
+across asynchronous boundaries.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_SpanID" title="structure - OTel.SpanID">
+        OTel.​Span​ID
+    </a>
+</dt>
+<dd>
+    <p>Uniquely identifies a single span using an 8-byte array.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_TraceFlags" title="structure - OTel.TraceFlags">
+        OTel.​Trace​Flags
+    </a>
+</dt>
+<dd>
+    <p>A set of flags denoting e.g. whether a span is sampled.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_TraceID" title="structure - OTel.TraceID">
+        OTel.​Trace​ID
+    </a>
+</dt>
+<dd>
+    <p>Uniquely identifies a single trace using a 16-byte array.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OTel_TraceState" title="structure - OTel.TraceState">
+        OTel.​Trace​State
+    </a>
+</dt>
+<dd>
+    <p>Provides additional vendor-specific trace identification information across different distributed tracing systems.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/opentelemetry-swift/OtlpGRPCSpanExporter_Config" title="structure - OtlpGRPCSpanExporter.Config">
+        Otlp​GRPCSpan​Exporter.​Config
+    </a>
+</dt>
+<dd>
+    <p>Configures an <code>OtlpGRPCSpanExporter</code> through arguments and environment variables.</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="enumerations">
+        <h2>Enumerations</h2>
+        <dl>
+            <dt class="enumeration">
+    <a href="/opentelemetry-swift/OTel_Hex" title="enumeration - OTel.Hex">
+        OTel.​Hex
+    </a>
+</dt>
+<dd>
+    <p>A collection of utilities when working with hex strings.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="/opentelemetry-swift/OTel_W3CPropagator_TraceParentParsingError_Reason" title="enumeration - OTel.W3CPropagator.TraceParentParsingError.Reason">
+        OTel.​W3CPropagator.​Trace​Parent​Parsing​Error.​Reason
+    </a>
+</dt>
+<dd>
+    <p>A reason explaining why trace parent parsing failed.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="/opentelemetry-swift/OTel_W3CPropagator_TraceStateParsingError_Reason" title="enumeration - OTel.W3CPropagator.TraceStateParsingError.Reason">
+        OTel.​W3CPropagator.​Trace​State​Parsing​Error.​Reason
+    </a>
+</dt>
+<dd>
+    <p>A reason explaining why trace state parsing failed.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="/opentelemetry-swift/OTel_ResourceDetection" title="enumeration - OTel.ResourceDetection">
+        OTel.​Resource​Detection
+    </a>
+</dt>
+<dd>
+    <p>Configures how resource attributes may be detected.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="/opentelemetry-swift/OTel_SamplingDecision" title="enumeration - OTel.SamplingDecision">
+        OTel.​Sampling​Decision
+    </a>
+</dt>
+<dd>
+    <p>A decision on whether a span should be recorded/sampled.</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="protocols">
+        <h2>Protocols</h2>
+        <dl>
+            <dt class="protocol">
+    <a href="/opentelemetry-swift/OTelSpanExporter" title="protocol - OTelSpanExporter">
+        OTel​Span​Exporter
+    </a>
+</dt>
+<dd>
+    <p>An exporter receives processed, sampled spans to export them, e.g. over the network.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="/opentelemetry-swift/OTelIDGenerator" title="protocol - OTelIDGenerator">
+        OTel​IDGenerator
+    </a>
+</dt>
+<dd>
+    <p>Responsible for generating trace and span ids.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="/opentelemetry-swift/OTelSpanProcessor" title="protocol - OTelSpanProcessor">
+        OTel​Span​Processor
+    </a>
+</dt>
+<dd>
+    <p>A processor receives ended spans from the tracer and potentially hands them over to an exporter.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="/opentelemetry-swift/OTelPropagator" title="protocol - OTelPropagator">
+        OTel​Propagator
+    </a>
+</dt>
+<dd>
+    <p>A propagator carries span context over asynchronous boundaries such as HTTP calls.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="/opentelemetry-swift/OTelResourceDetector" title="protocol - OTelResourceDetector">
+        OTel​Resource​Detector
+    </a>
+</dt>
+<dd>
+    <p>A resource detector asynchronously detects attributes describing an <code>OTel.Resource</code>.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="/opentelemetry-swift/OTelSampler" title="protocol - OTelSampler">
+        OTel​Sampler
+    </a>
+</dt>
+<dd>
+    <p>Decides whether a given span should be sampled i.e. passed along to the span exporter.</p>
+
+</dd>
+        </dl>
+    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-03-31T19:40:47+0000">March 31, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

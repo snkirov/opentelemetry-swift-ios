@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenTelemetry Swift - OTelResourceDetector</title>
+    <link rel="stylesheet" type="text/css" href="/opentelemetry-swift/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/opentelemetry-swift/">
+            <strong>
+                OpenTelemetry Swift
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#otelresourcedetector.detect()">detect()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Protocol</small>
+    <code class="name">OTel​Resource​Detector</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">OTelResourceDetector</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>A resource detector asynchronously detects attributes describing an <code>OTel.Resource</code>.</p>
+
+</div>
+<div class="discussion">
+    <aside class="seealso">
+    <p><a href="https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/resource/sdk.md#resource-creation">OTel Spec: Resource Creation</a></p>
+
+</aside>
+</div>
+
+
+
+
+    <section id="requirements">
+        <h2>Requirements</h2>
+
+        <div role="article" class="function" id="otelresourcedetector.detect()">
+    <h3>
+        <code>detect()</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">detect</span>() -&gt; <span class="type">EventLoopFuture</span>&lt;<a href="/opentelemetry-swift/OTel"><span class="type">OTel</span></a>.<span class="type">Resource</span>&gt;</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Detect attributes describing the returned resource using this detector.
+If the detector does not detect any attributes, it returns an empty <code>OTel.Resource</code>.</p>
+
+</div>
+  <h4>Returns</h4>
+  <p>A future <code>Otel.Resource</code></p>
+
+</div>
+    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-03-31T19:40:47+0000">March 31, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

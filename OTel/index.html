@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenTelemetry Swift - OTel</title>
+    <link rel="stylesheet" type="text/css" href="/opentelemetry-swift/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/opentelemetry-swift/">
+            <strong>
+                OpenTelemetry Swift
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#otel.init(servicename:eventloopgroup:resourcedetection:idgenerator:sampler:processor:propagator:logger:)">init(service​Name:​event​Loop​Group:​resource​Detection:​id​Generator:​sampler:​processor:​propagator:​logger:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#otel.versionstring">version​String</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#otel.start()">start()</a></li><li class="function"><a href="#otel.tracer()">tracer()</a></li><li class="function"><a href="#otel.shutdown()">shutdown()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">OTel</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">OTel</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The main entry point to using OpenTelemetry.</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="structure"><code><a href="/opentelemetry-swift/OTel_NoOpSpanExporter">OTel.NoOpSpanExporter</a></code></dt>
+<dd><p>A no-op span exporter that simply ignores the given spans and always succeeds.</p>
+</dd>
+<dt class="enumeration"><code><a href="/opentelemetry-swift/OTel_Hex">OTel.Hex</a></code></dt>
+<dd><p>A collection of utilities when working with hex strings.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_NoOpSpanProcessor">OTel.NoOpSpanProcessor</a></code></dt>
+<dd><p>A no-op span processor that simply ignores the given spans.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_SimpleSpanProcessor">OTel.SimpleSpanProcessor</a></code></dt>
+<dd><p>A span processor that simply forwards all <em>sampled</em> spans to a given exporter.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_W3CPropagator">OTel.W3CPropagator</a></code></dt>
+<dd><p>A propagator which operates on HTTP headers using the <a href="https://www.w3.org/TR/2020/REC-trace-context-1-20200206/">W3C TraceContext</a>.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_RandomIDGenerator">OTel.RandomIDGenerator</a></code></dt>
+<dd><p>Generates random trace and span ids using a <code>RandomNumberGenerator</code>.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_RecordedSpan">OTel.RecordedSpan</a></code></dt>
+<dd><p>Holds the read-only data collected during the lifetime of a span, typically created right after a span was ended.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_Resource">OTel.Resource</a></code></dt>
+<dd><p>A resource represents the entity being traced.</p>
+</dd>
+<dt class="enumeration"><code><a href="/opentelemetry-swift/OTel_ResourceDetection">OTel.ResourceDetection</a></code></dt>
+<dd><p>Configures how resource attributes may be detected.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_ConstantSampler">OTel.ConstantSampler</a></code></dt>
+<dd><p>A sampler that always returns either <code>OTel.SamplingDecision.recordAndSampled</code> or <code>OTel.SamplingDecision.drop</code>
+based on configuration.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_ParentBasedSampler">OTel.ParentBasedSampler</a></code></dt>
+<dd><p>A sampler composed of multiple configurable samplers which are called based on whether
+the parent span is remote and/or sampled, or doesn't exist.</p>
+</dd>
+<dt class="enumeration"><code><a href="/opentelemetry-swift/OTel_SamplingDecision">OTel.SamplingDecision</a></code></dt>
+<dd><p>A decision on whether a span should be recorded/sampled.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_SamplingResult">OTel.SamplingResult</a></code></dt>
+<dd><p>The result of asking a sampler whether a given span should be sampled.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_SpanContext">OTel.SpanContext</a></code></dt>
+<dd><p>A <code>SpanContext</code> represents the portion of a <code>Span</code> which must be serialized and propagated
+across asynchronous boundaries.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_SpanID">OTel.SpanID</a></code></dt>
+<dd><p>Uniquely identifies a single span using an 8-byte array.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_TraceFlags">OTel.TraceFlags</a></code></dt>
+<dd><p>A set of flags denoting e.g. whether a span is sampled.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_TraceID">OTel.TraceID</a></code></dt>
+<dd><p>Uniquely identifies a single trace using a 16-byte array.</p>
+</dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_TraceState">OTel.TraceState</a></code></dt>
+<dd><p>Provides additional vendor-specific trace identification information across different distributed tracing systems.</p>
+</dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="otel.init(servicename:eventloopgroup:resourcedetection:idgenerator:sampler:processor:propagator:logger:)">
+    <h3>
+        <code>init(service​Name:​event​Loop​Group:​resource​Detection:​id​Generator:​sampler:​processor:​propagator:​logger:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">serviceName</span>: <span class="type">String</span>, <span class="variable">eventLoopGroup</span>: <span class="type">EventLoopGroup</span>, <span class="variable">resourceDetection</span>: <span class="type">ResourceDetection</span> = .<span class="variable">automatic</span>(<span class="variable">additionalDetectors</span>: []), <span class="variable">idGenerator</span>: <a href="/opentelemetry-swift/OTelIDGenerator"><span class="type">OTelIDGenerator</span></a> = <span class="variable">RandomIDGenerator</span>(), <span class="variable">sampler</span>: <a href="/opentelemetry-swift/OTelSampler"><span class="type">OTelSampler</span></a> = <span class="variable">ParentBasedSampler</span>(<span class="variable">rootSampler</span>: <span class="type">ConstantSampler</span>(<span class="variable">isOn</span>: <span class="keyword">true</span>)), <span class="variable">processor</span>: <a href="/opentelemetry-swift/OTelSpanProcessor"><span class="type">OTelSpanProcessor</span></a>? = <span class="keyword">nil</span>, <span class="variable">propagator</span>: <a href="/opentelemetry-swift/OTelPropagator"><span class="type">OTelPropagator</span></a> = <span class="variable">W3CPropagator</span>(), <span class="variable">logger</span>: <span class="type">Logger</span> = <span class="variable">Logger</span>(<span class="variable">label</span>: <span class="string literal">"</span><span class="string literal">OTel</span><span class="string literal">"</span>))</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Initialize <code>OTel</code> with the given configuration. Don't forget to also call <code>start</code> early on in your application.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>service​Name</th>
+    <td><code class="type">String</code></td>
+    <td><p>The name of the service being traced, e.g. &quot;checkout&quot;.</p>
+</td>
+</tr>
+<tr>
+    <th>event​Loop​Group</th>
+    <td><code class="type">Event​Loop​Group</code></td>
+    <td><p>The <code>EventLoopGroup</code> to run on.</p>
+</td>
+</tr>
+<tr>
+    <th>resource​Detection</th>
+    <td><code class="type">Resource​Detection</code></td>
+    <td><p>Configures how resource attribution may be detected, defaults to <code>.automatic</code>.</p>
+</td>
+</tr>
+<tr>
+    <th>sampler</th>
+    <td><code class="type">OTel​Sampler</code></td>
+    <td><p>Configures the sampler to be used, defaults to an <em>always on</em> sampler as the root of a parent-based sampler.</p>
+</td>
+</tr>
+<tr>
+    <th>processor</th>
+    <td><code class="type">OTel​Span​Processor?</code></td>
+    <td><p>Configures the span processor to be used for ended spans, defaults to a no-op processor.</p>
+</td>
+</tr>
+<tr>
+    <th>propagator</th>
+    <td><code class="type">OTel​Propagator</code></td>
+    <td><p>Configures the propagator to be used, defaults to a <code>W3CPropagator</code>.</p>
+</td>
+</tr>
+<tr>
+    <th>logger</th>
+    <td><code class="type">Logger</code></td>
+    <td><p>The Logger used by OTel and its sub-components.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="otel.versionstring">
+    <h3>
+        <code>version​String</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">versionString</span> = <span class="string literal">"</span><span class="string literal">0.0.1-alpha</span><span class="string literal">"</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The current <code>semver</code> version of the library.</p>
+
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="otel.start()">
+    <h3>
+        <code>start()</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">start</span>() -&gt; <span class="type">EventLoopFuture</span>&lt;<span class="type">Void</span>&gt;</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Start <code>OTel</code> to detect information about the resource your application is running on.</p>
+
+</div>
+  <h4>Returns</h4>
+  <p>A future that completes once <code>OTel</code> and its sub-components was started.</p>
+
+</div>
+<div role="article" class="function" id="otel.tracer()">
+    <h3>
+        <code>tracer()</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">tracer</span>() -&gt; <span class="type">Tracing</span>.<span class="type">Tracer</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Retrieve a configured <code>Tracer</code>.</p>
+
+</div>
+<div class="discussion">
+    <p>Instead of using the returned instance directly to trace your application,
+use it to bootstrap the instrumentation system:</p>
+
+<html><body><pre class="highlight"><code><span class="variable">InstrumentationSystem</span>.<span class="type">bootstrap</span>(<span class="variable">otel</span>.<span class="type">tracer</span>())
+<span class="comment">// somewhere else in your application</span>
+<span class="variable">InstrumentationSystem</span>.<span class="type">tracer</span>.<span class="type">startSpan</span>(...)
+</code></pre></body></html>
+</div>
+  <h4>Returns</h4>
+  <p>An OTel Tracer conforming to the <a href="https://github.com/apple/swift-distributed-tracing/blob/main/Sources/Tracing/Tracer.swift"><code>Tracer</code></a> protocol.</p>
+
+</div>
+<div role="article" class="function" id="otel.shutdown()">
+    <h3>
+        <code>shutdown()</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">shutdown</span>() -&gt; <span class="type">EventLoopFuture</span>&lt;<span class="type">Void</span>&gt;</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Shutdown <code>OTel</code>.</p>
+
+</div>
+  <h4>Returns</h4>
+  <p>A future that completes once <code>OTel</code> and its sub-components was shutdown.</p>
+
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-03-31T19:40:47+0000">March 31, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>
