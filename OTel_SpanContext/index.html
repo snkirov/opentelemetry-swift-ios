@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#otel.spancontext.traceid">trace​ID</a></li><li class="variable"><a href="#otel.spancontext.spanid">span​ID</a></li><li class="variable"><a href="#otel.spancontext.parentspanid">parent​Span​ID</a></li><li class="variable"><a href="#otel.spancontext.traceflags">trace​Flags</a></li><li class="variable"><a href="#otel.spancontext.tracestate">trace​State</a></li><li class="variable"><a href="#otel.spancontext.isremote">is​Remote</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#otel.spancontext.init(traceid:spanid:parentspanid:traceflags:tracestate:isremote:)">init(trace​ID:​span​ID:​parent​Span​ID:​trace​Flags:​trace​State:​is​Remote:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#otel.spancontext.traceid">trace​ID</a></li><li class="variable"><a href="#otel.spancontext.spanid">span​ID</a></li><li class="variable"><a href="#otel.spancontext.parentspanid">parent​Span​ID</a></li><li class="variable"><a href="#otel.spancontext.traceflags">trace​Flags</a></li><li class="variable"><a href="#otel.spancontext.tracestate">trace​State</a></li><li class="variable"><a href="#otel.spancontext.isremote">is​Remote</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -101,6 +101,75 @@ across asynchronous boundaries.</p>
     <dt class="unknown"><code>Equatable</code></dt>
 </dl>
 </section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="otel.spancontext.init(traceid:spanid:parentspanid:traceflags:tracestate:isremote:)">
+    <h3>
+        <code>init(trace​ID:​span​ID:​parent​Span​ID:​trace​Flags:​trace​State:​is​Remote:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">traceID</span>: <a href="/opentelemetry-swift/OTel"><span class="type">OTel</span></a>.<span class="type">TraceID</span>, <span class="variable">spanID</span>: <a href="/opentelemetry-swift/OTel"><span class="type">OTel</span></a>.<span class="type">SpanID</span>, <span class="variable">parentSpanID</span>: <a href="/opentelemetry-swift/OTel"><span class="type">OTel</span></a>.<span class="type">SpanID</span>? = <span class="keyword">nil</span>, <span class="variable">traceFlags</span>: <a href="/opentelemetry-swift/OTel"><span class="type">OTel</span></a>.<span class="type">TraceFlags</span>, <span class="variable">traceState</span>: <a href="/opentelemetry-swift/OTel"><span class="type">OTel</span></a>.<span class="type">TraceState</span>? = <span class="keyword">nil</span>, <span class="variable">isRemote</span>: <span class="type">Bool</span>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Initialize a new span context.</p>
+
+</div>
+<div class="discussion">
+    <aside class="note">
+    <p>Span contexts should only be created by <code>OTelPropagator</code>s when extracting from a carrier.</p>
+
+</aside>
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>trace​ID</th>
+    <td><code class="type">OTel.​Trace​ID</code></td>
+    <td><p>The trace ID of the span.</p>
+</td>
+</tr>
+<tr>
+    <th>span​ID</th>
+    <td><code class="type">OTel.​Span​ID</code></td>
+    <td><p>The ID of the span itself.</p>
+</td>
+</tr>
+<tr>
+    <th>parent​Span​ID</th>
+    <td><code class="type">OTel.​Span​ID?</code></td>
+    <td><p>The ID of the optional parent span, defaults to <code>nil</code>.</p>
+</td>
+</tr>
+<tr>
+    <th>trace​Flags</th>
+    <td><code class="type">OTel.​Trace​Flags</code></td>
+    <td><p>The trace flags of the span.</p>
+</td>
+</tr>
+<tr>
+    <th>trace​State</th>
+    <td><code class="type">OTel.​Trace​State?</code></td>
+    <td><p>The optional trace state, defaults to <code>nil</code>.</p>
+</td>
+</tr>
+<tr>
+    <th>is​Remote</th>
+    <td><code class="type">Bool</code></td>
+    <td><p>Whether the span is remote.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
     <section id="properties">
         <h2>Properties</h2>
 
@@ -173,7 +242,7 @@ across asynchronous boundaries.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-04-01T07:35:30+0000">April 1, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-04-01T07:56:17+0000">April 1, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>
