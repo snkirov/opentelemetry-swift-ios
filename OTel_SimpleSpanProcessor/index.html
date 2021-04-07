@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#otel.simplespanprocessor.init(exportingto:logger:)">init(exporting​To:​logger:​)</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#otel.simplespanprocessor.processendedspan(_:on:)">process​Ended​Span(_:​on:​)</a></li><li class="function"><a href="#otel.simplespanprocessor.shutdowngracefully()">shutdown​Gracefully()</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#otel.simplespanprocessor.init(exportingto:)">init(exporting​To:​)</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#otel.simplespanprocessor.processendedspan(_:on:)">process​Ended​Span(_:​on:​)</a></li><li class="function"><a href="#otel.simplespanprocessor.shutdowngracefully()">shutdown​Gracefully()</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -102,11 +102,11 @@
     <section id="initializers">
         <h2>Initializers</h2>
 
-        <div role="article" class="initializer" id="otel.simplespanprocessor.init(exportingto:logger:)">
+        <div role="article" class="initializer" id="otel.simplespanprocessor.init(exportingto:)">
     <h3>
-        <code>init(exporting​To:​logger:​)</code>
+        <code>init(exporting​To:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">exportingTo</span> <span class="variable">exporter</span>: <a href="/opentelemetry-swift/OTelSpanExporter"><span class="type">OTelSpanExporter</span></a>, <span class="variable">logger</span>: <span class="type">Logger</span> = <span class="variable">Logger</span>(<span class="variable">label</span>: <span class="string literal">"</span><span class="string literal">OTel</span><span class="string literal">"</span>))</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">exportingTo</span> <span class="variable">exporter</span>: <a href="/opentelemetry-swift/OTelSpanExporter"><span class="type">OTelSpanExporter</span></a>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Initialize a simple span processor forwarding to the given exporter.</p>
 
@@ -126,12 +126,6 @@
     <th>exporter</th>
     <td><code class="type">OTel​Span​Exporter</code></td>
     <td><p>The exporter to forward sampled spans to.</p>
-</td>
-</tr>
-<tr>
-    <th>logger</th>
-    <td><code class="type">Logger</code></td>
-    <td><p>The logger to report the result of exporting spans.</p>
 </td>
 </tr>
   </tbody>
@@ -162,7 +156,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-04-06T14:17:54+0000">April 6, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-04-07T11:53:46+0000">April 7, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>
