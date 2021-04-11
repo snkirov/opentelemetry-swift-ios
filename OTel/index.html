@@ -59,6 +59,10 @@
 <dt class="structure"><code><a href="/opentelemetry-swift/OTel_SimpleSpanProcessor">OTel.SimpleSpanProcessor</a></code></dt>
 <dd><p>A span processor that simply forwards all <em>sampled</em> spans to a given exporter.</p>
 </dd>
+<dt class="structure"><code><a href="/opentelemetry-swift/OTel_MultiplexPropagator">OTel.MultiplexPropagator</a></code></dt>
+<dd><p>A pseudo-<code>OTelPropagator</code> that may be used to instrument using
+multiple other <code>OTelPropagator</code>s across a common <code>OTel.SpanContext</code>.</p>
+</dd>
 <dt class="structure"><code><a href="/opentelemetry-swift/OTel_W3CPropagator">OTel.W3CPropagator</a></code></dt>
 <dd><p>A propagator which operates on HTTP headers using the <a href="https://www.w3.org/TR/2020/REC-trace-context-1-20200206/">W3C TraceContext</a>.</p>
 </dd>
@@ -249,7 +253,7 @@ use it to bootstrap the instrumentation system:</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-04-08T20:25:47+0000">April 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-04-11T23:26:19+0000">April 11, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>
