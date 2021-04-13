@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#otel.noopspanexporter.init(eventloopgroup:)">init(event​Loop​Group:​)</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#otel.noopspanexporter.export(_:on:)">export(_:​on:​)</a></li><li class="function"><a href="#otel.noopspanexporter.shutdowngracefully()">shutdown​Gracefully()</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#otel.noopspanexporter.init(eventloopgroup:)">init(event​Loop​Group:​)</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#otel.noopspanexporter.export(_:)">export(_:​)</a></li><li class="function"><a href="#otel.noopspanexporter.shutdowngracefully()">shutdown​Gracefully()</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -135,11 +135,11 @@
     <section id="methods">
         <h2>Methods</h2>
 
-        <div role="article" class="function" id="otel.noopspanexporter.export(_:on:)">
+        <div role="article" class="function" id="otel.noopspanexporter.export(_:)">
     <h3>
-        <code>export(_:​on:​)</code>
+        <code>export(_:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">export</span>(<span class="keyword">_</span> <span class="variable">batch</span>: <span class="type">ArraySlice</span>&lt;<a href="/opentelemetry-swift/OTel"><span class="type">OTel</span></a>.<span class="type">RecordedSpan</span>&gt;, <span class="variable">on</span> <span class="variable">resource</span>: <a href="/opentelemetry-swift/OTel"><span class="type">OTel</span></a>.<span class="type">Resource</span>) -&gt; <span class="type">EventLoopFuture</span>&lt;<span class="type">Void</span>&gt;</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">export</span>&lt;<span class="variable">C</span>: <span class="type">Collection</span>&gt;(<span class="keyword">_</span> <span class="variable">batch</span>: <span class="type">C</span>) -&gt; <span class="type">EventLoopFuture</span>&lt;<span class="type">Void</span>&gt; <span class="keyword">where</span> <span class="type">C</span>.<span class="type">Element</span> == <a href="/opentelemetry-swift/OTel"><span class="type">OTel</span></a>.<span class="type">RecordedSpan</span></code></pre></body></html>
 </div>
 <div role="article" class="function" id="otel.noopspanexporter.shutdowngracefully()">
     <h3>
@@ -156,7 +156,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-04-11T23:26:19+0000">April 11, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-04-13T14:25:17+0000">April 13, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>
