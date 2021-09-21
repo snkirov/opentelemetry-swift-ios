@@ -14,7 +14,6 @@
             </strong>
             <span>Documentation</span>
         </a>
-        <sup>Beta</sup>
     </header>
 
     <!--
@@ -37,7 +36,9 @@
     <code class="name">OTel.​Resource​Detection</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">ResourceDetection</span></code></pre></body></html>
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">ResourceDetection</span>  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Configures how resource attributes may be detected.</p>
 
@@ -57,9 +58,11 @@
 
         <div role="article" class="case" id="otel.resourcedetection.automatic">
     <h3>
-        <code>automatic</code>
+        <code><a href="#otel.resourcedetection.automatic">automatic</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">automatic</span>(<span class="variable">additionalDetectors</span>: [<a href="/opentelemetry-swift/OTelResourceDetector"><span class="type">OTelResourceDetector</span></a>])</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">case</span> <span class="variable">automatic</span>(<span class="variable">additionalDetectors</span>: [<a href="/opentelemetry-swift/OTelResourceDetector"><span class="type">OTelResourceDetector</span></a>]) </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Automatically detect resource attributes based on the process, environment, and any given additional detectors.</p>
 
@@ -67,9 +70,11 @@
 </div>
 <div role="article" class="case" id="otel.resourcedetection.manual">
     <h3>
-        <code>manual</code>
+        <code><a href="#otel.resourcedetection.manual">manual</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">manual</span>(: <span class="type">Resource</span>)</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">case</span> <span class="variable">manual</span>(<span class="type">Resource</span>) </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Uses the given resource as the single source of truth.</p>
 
@@ -77,9 +82,11 @@
 </div>
 <div role="article" class="case" id="otel.resourcedetection.none">
     <h3>
-        <code>none</code>
+        <code><a href="#otel.resourcedetection.none">none</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">none</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">case</span> <span class="variable">none</span></body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Does not detect any attributes, i.e. results in an empty <code>OTel.Resource</code>.</p>
 
@@ -94,7 +101,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-04-17T12:47:05+0000">April 17, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-09-21T10:20:08+0000">September 21, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

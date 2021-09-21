@@ -14,7 +14,6 @@
             </strong>
             <span>Documentation</span>
         </a>
-        <sup>Beta</sup>
     </header>
 
     <!--
@@ -37,7 +36,9 @@
     <code class="name">OTel.​Resource</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Resource</span></code></pre></body></html>
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Resource</span>  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>A resource represents the entity being traced.</p>
 
@@ -46,7 +47,7 @@
     <p>The attributes of a resource are expressed using <code>SpanAttributes</code>.
 Resources are immutable, but multiple resources may be merged using <code>merging(_:​)</code>.</p>
 
-<aside class="seealso">
+<aside class="see also" title="See Also">
     <p><a href="https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/resource/sdk.md#resource-sdk">OTel Spec: Resource</a></p>
 
 </aside>
@@ -66,9 +67,11 @@ Resources are immutable, but multiple resources may be merged using <code>mergin
 
         <div role="article" class="initializer" id="otel.resource.init(attributes:)">
     <h3>
-        <code>init(attributes:​)</code>
+        <code><a href="#otel.resource.init(attributes:)">init(attributes:​)</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">attributes</span>: <span class="type">SpanAttributes</span> = [:])</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">attributes</span>: <span class="type">SpanAttributes</span> = [:])  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Create a new <code>OTelResource</code> with the given attributes.</p>
 
@@ -99,9 +102,11 @@ Resources are immutable, but multiple resources may be merged using <code>mergin
 
         <div role="article" class="variable" id="otel.resource.attributes">
     <h3>
-        <code>attributes</code>
+        <code><a href="#otel.resource.attributes">attributes</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">attributes</span>: <span class="type">SpanAttributes</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">attributes</span>: <span class="type">SpanAttributes</span></body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>The attributes describing this resource.</p>
 
@@ -113,9 +118,11 @@ Resources are immutable, but multiple resources may be merged using <code>mergin
 
         <div role="article" class="function" id="otel.resource.merging(_:)">
     <h3>
-        <code>merging(_:​)</code>
+        <code><a href="#otel.resource.merging(_:)">merging(_:​)</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">merging</span>(<span class="keyword">_</span> <span class="variable">other</span>: <span class="type">Resource</span>) -&gt; <span class="type">Resource</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">merging</span>(<span class="keyword">_</span> <span class="variable">other</span>: <span class="type">Resource</span>) -&gt; <span class="type">Resource</span>  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Creates a new <code>Resource</code> by merging the attributes of the given resource
 into this resource's attributes, overwriting values of duplicate keys with those
@@ -123,7 +130,7 @@ of the other attributes.</p>
 
 </div>
 <div class="discussion">
-    <aside class="seealso">
+    <aside class="see also" title="See Also">
     <p><a href="https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/resource/sdk.md#merge">OTel Spec: Merge Resources</a></p>
 
 </aside>
@@ -160,7 +167,7 @@ of the other attributes.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-04-17T12:47:05+0000">April 17, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-09-21T10:20:08+0000">September 21, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

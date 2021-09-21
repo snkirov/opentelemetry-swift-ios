@@ -14,7 +14,6 @@
             </strong>
             <span>Documentation</span>
         </a>
-        <sup>Beta</sup>
     </header>
 
     <!--
@@ -37,7 +36,9 @@
     <code class="name">OTel</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">OTel</span></code></pre></body></html>
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">OTel</span>  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>The main entry point to using OpenTelemetry.</p>
 
@@ -118,9 +119,20 @@ across asynchronous boundaries.</p>
 
         <div role="article" class="initializer" id="otel.init(servicename:eventloopgroup:resourcedetection:idgenerator:sampler:processor:propagator:logger:)">
     <h3>
-        <code>init(service​Name:​event​Loop​Group:​resource​Detection:​id​Generator:​sampler:​processor:​propagator:​logger:​)</code>
+        <code><a href="#otel.init(servicename:eventloopgroup:resourcedetection:idgenerator:sampler:processor:propagator:logger:)">init(service​Name:​event​Loop​Group:​resource​Detection:​id​Generator:​sampler:​processor:​propagator:​logger:​)</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">serviceName</span>: <span class="type">String</span>, <span class="variable">eventLoopGroup</span>: <span class="type">EventLoopGroup</span>, <span class="variable">resourceDetection</span>: <span class="type">ResourceDetection</span> = .<span class="variable">automatic</span>(<span class="variable">additionalDetectors</span>: []), <span class="variable">idGenerator</span>: <a href="/opentelemetry-swift/OTelIDGenerator"><span class="type">OTelIDGenerator</span></a> = <span class="variable">RandomIDGenerator</span>(), <span class="variable">sampler</span>: <a href="/opentelemetry-swift/OTelSampler"><span class="type">OTelSampler</span></a> = <span class="variable">ParentBasedSampler</span>(<span class="variable">rootSampler</span>: <span class="type">ConstantSampler</span>(<span class="variable">isOn</span>: <span class="keyword">true</span>)), <span class="variable">processor</span>: <a href="/opentelemetry-swift/OTelSpanProcessor"><span class="type">OTelSpanProcessor</span></a>? = <span class="keyword">nil</span>, <span class="variable">propagator</span>: <a href="/opentelemetry-swift/OTelPropagator"><span class="type">OTelPropagator</span></a> = <span class="variable">W3CPropagator</span>(), <span class="variable">logger</span>: <span class="type">Logger</span> = <span class="variable">Logger</span>(<span class="variable">label</span>: <span class="string literal">"</span><span class="string literal">OTel</span><span class="string literal">"</span>))</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(
+        <span class="variable">serviceName</span>: <span class="type">String</span>,
+        <span class="variable">eventLoopGroup</span>: <span class="type">EventLoopGroup</span>,
+        <span class="variable">resourceDetection</span>: <span class="type">ResourceDetection</span> = .<span class="variable">automatic</span>(<span class="variable">additionalDetectors</span>: []),
+        <span class="variable">idGenerator</span>: <a href="/opentelemetry-swift/OTelIDGenerator"><span class="type">OTelIDGenerator</span></a> = <span class="variable">RandomIDGenerator</span>(),
+        <span class="variable">sampler</span>: <a href="/opentelemetry-swift/OTelSampler"><span class="type">OTelSampler</span></a> = <span class="variable">ParentBasedSampler</span>(<span class="variable">rootSampler</span>: <span class="type">ConstantSampler</span>(<span class="variable">isOn</span>: <span class="keyword">true</span>)),
+        <span class="variable">processor</span>: <a href="/opentelemetry-swift/OTelSpanProcessor"><span class="type">OTelSpanProcessor</span></a>? = <span class="keyword">nil</span>,
+        <span class="variable">propagator</span>: <a href="/opentelemetry-swift/OTelPropagator"><span class="type">OTelPropagator</span></a> = <span class="variable">W3CPropagator</span>(),
+        <span class="variable">logger</span>: <span class="type">Logger</span> = <span class="variable">Logger</span>(<span class="variable">label</span>: <span class="string literal">"</span><span class="string literal">OTel</span><span class="string literal">"</span>)
+    )  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Initialize <code>OTel</code> with the given configuration. Don't forget to also call <code>start</code> early on in your application.</p>
 
@@ -187,9 +199,11 @@ across asynchronous boundaries.</p>
 
         <div role="article" class="variable" id="otel.versionstring">
     <h3>
-        <code>version​String</code>
+        <code><a href="#otel.versionstring">version​String</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">versionString</span> = <span class="string literal">"</span><span class="string literal">0.1.0</span><span class="string literal">"</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">versionString</span> = <span class="string literal">"</span><span class="string literal">0.1.0</span><span class="string literal">"</span></body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>The current <code>semver</code> version of the library.</p>
 
@@ -201,9 +215,11 @@ across asynchronous boundaries.</p>
 
         <div role="article" class="function" id="otel.start()">
     <h3>
-        <code>start()</code>
+        <code><a href="#otel.start()">start()</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">start</span>() -&gt; <span class="type">EventLoopFuture</span>&lt;<span class="type">Void</span>&gt;</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">start</span>() -&gt; <span class="type">EventLoopFuture</span>&lt;<span class="type">Void</span>&gt;  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Start <code>OTel</code> to detect information about the resource your application is running on.</p>
 
@@ -214,9 +230,11 @@ across asynchronous boundaries.</p>
 </div>
 <div role="article" class="function" id="otel.tracer()">
     <h3>
-        <code>tracer()</code>
+        <code><a href="#otel.tracer()">tracer()</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">tracer</span>() -&gt; <span class="type">Tracing</span>.<span class="type">Tracer</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">tracer</span>() -&gt; <span class="type">Tracing</span>.<span class="type">Tracer</span>  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Retrieve a configured <code>Tracer</code>.</p>
 
@@ -225,9 +243,9 @@ across asynchronous boundaries.</p>
     <p>Instead of using the returned instance directly to trace your application,
 use it to bootstrap the instrumentation system:</p>
 
-<html><body><pre class="highlight"><code><span class="variable">InstrumentationSystem</span>.<span class="type">bootstrap</span>(<span class="variable">otel</span>.<span class="type">tracer</span>())
+<html><body><pre class="highlight"><code><span class="variable">InstrumentationSystem</span>.<span class="variable">bootstrap</span>(<span class="variable">otel</span>.<span class="variable">tracer</span>())
 <span class="comment">// somewhere else in your application</span>
-<span class="variable">InstrumentationSystem</span>.<span class="type">tracer</span>.<span class="type">startSpan</span>(...)
+<span class="variable">InstrumentationSystem</span>.<span class="variable">tracer</span>.<span class="variable">startSpan</span>(...)
 </code></pre></body></html>
 </div>
   <h4>Returns</h4>
@@ -236,9 +254,11 @@ use it to bootstrap the instrumentation system:</p>
 </div>
 <div role="article" class="function" id="otel.shutdown()">
     <h3>
-        <code>shutdown()</code>
+        <code><a href="#otel.shutdown()">shutdown()</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">shutdown</span>() -&gt; <span class="type">EventLoopFuture</span>&lt;<span class="type">Void</span>&gt;</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">shutdown</span>() -&gt; <span class="type">EventLoopFuture</span>&lt;<span class="type">Void</span>&gt;  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Shutdown <code>OTel</code>.</p>
 
@@ -256,7 +276,7 @@ use it to bootstrap the instrumentation system:</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-04-17T12:47:05+0000">April 17, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-09-21T10:20:08+0000">September 21, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

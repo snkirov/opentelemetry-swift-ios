@@ -14,7 +14,6 @@
             </strong>
             <span>Documentation</span>
         </a>
-        <sup>Beta</sup>
     </header>
 
     <!--
@@ -37,7 +36,9 @@
     <code class="name">Otlp​GRPCSpan​Exporter.​Config</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Config</span></code></pre></body></html>
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Config</span>  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Configures an <code>OtlpGRPCSpanExporter</code> through arguments and environment variables.</p>
 
@@ -73,9 +74,16 @@
 
         <div role="article" class="initializer" id="otlpgrpcspanexporter.config.init(eventloopgroup:host:port:logger:)">
     <h3>
-        <code>init(event​Loop​Group:​host:​port:​logger:​)</code>
+        <code><a href="#otlpgrpcspanexporter.config.init(eventloopgroup:host:port:logger:)">init(event​Loop​Group:​host:​port:​logger:​)</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">eventLoopGroup</span>: <span class="type">EventLoopGroup</span>, <span class="variable">host</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">port</span>: <span class="type">UInt</span>? = <span class="keyword">nil</span>, <span class="variable">logger</span>: <span class="type">Logger</span> = <span class="variable">Logger</span>(<span class="variable">label</span>: <span class="string literal">"</span><span class="string literal">OtlpGRPCSpanExporter</span><span class="string literal">"</span>))</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(
+            <span class="variable">eventLoopGroup</span>: <span class="type">EventLoopGroup</span>,
+            <span class="variable">host</span>: <span class="type">String</span>? = <span class="keyword">nil</span>,
+            <span class="variable">port</span>: <span class="type">UInt</span>? = <span class="keyword">nil</span>,
+            <span class="variable">logger</span>: <span class="type">Logger</span> = <span class="variable">Logger</span>(<span class="variable">label</span>: <span class="string literal">"</span><span class="string literal">OtlpGRPCSpanExporter</span><span class="string literal">"</span>)
+        )  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Initialize a configuration to pass to an <code>OtlpGRPCSpanExporter</code>.</p>
 
@@ -127,7 +135,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-04-17T12:47:05+0000">April 17, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-09-21T10:20:08+0000">September 21, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

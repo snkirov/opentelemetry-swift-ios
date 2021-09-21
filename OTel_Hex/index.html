@@ -14,7 +14,6 @@
             </strong>
             <span>Documentation</span>
         </a>
-        <sup>Beta</sup>
     </header>
 
     <!--
@@ -37,7 +36,9 @@
     <code class="name">OTel.​Hex</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">Hex</span></code></pre></body></html>
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">Hex</span>  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>A collection of utilities when working with hex strings.</p>
 
@@ -57,14 +58,16 @@
 
         <div role="article" class="variable" id="otel.hex.lookup">
     <h3>
-        <code>lookup</code>
+        <code><a href="#otel.hex.lookup">lookup</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">lookup</span> = [
-            <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">0</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">1</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">2</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">3</span><span class="string literal">"</span>),
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">lookup</span> = [
+            <span class="type">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">0</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">1</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">2</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">3</span><span class="string literal">"</span>),
             <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">4</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">5</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">6</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">7</span><span class="string literal">"</span>),
             <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">8</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">9</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">a</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">b</span><span class="string literal">"</span>),
             <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">c</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">d</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">e</span><span class="string literal">"</span>), <span class="variable">UInt8</span>(<span class="variable">ascii</span>: <span class="string literal">"</span><span class="string literal">f</span><span class="string literal">"</span>),
-        ]</code></pre></body></html>
+        ] </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>A lockup table for quick conversion of bytes to hex-bytes.</p>
 
@@ -76,15 +79,20 @@
 
         <div role="article" class="function" id="otel.hex.convert(_:tobytes:)">
     <h3>
-        <code>convert(_:​to​Bytes:​)</code>
+        <code><a href="#otel.hex.convert(_:tobytes:)">convert(_:​to​Bytes:​)</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">convert</span>&lt;<span class="variable">T</span>&gt;(<span class="keyword">_</span> <span class="variable">ascii</span>: <span class="type">T</span>, <span class="variable">toBytes</span> <span class="variable">target</span>: <span class="type">UnsafeMutableRawBufferPointer</span>) <span class="keyword">where</span> <span class="type">T</span>: <span class="type">RandomAccessCollection</span>, <span class="type">T</span>.<span class="type">Element</span> == <span class="type">UInt8</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">convert</span>&lt;<span class="variable">T</span>&gt;(
+            <span class="keyword">_</span> <span class="variable">ascii</span>: <span class="type">T</span>,
+            <span class="variable">toBytes</span> <span class="variable">target</span>: <span class="type">UnsafeMutableRawBufferPointer</span>
+        ) <span class="keyword">where</span> <span class="type">T</span>: <span class="type">RandomAccessCollection</span>, <span class="type">T</span>.<span class="type">Element</span> == <span class="type">UInt8</span>  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Convert the given ASCII bytes into bytes stored in the given target.</p>
 
 </div>
 <div class="discussion">
-    <aside class="warning">
+    <aside class="warning" title="Warning">
     <p>The target must be exactly half the size of the ASCII bytes.</p>
 
 </aside>
@@ -124,7 +132,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-04-17T12:47:05+0000">April 17, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-09-21T10:20:08+0000">September 21, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

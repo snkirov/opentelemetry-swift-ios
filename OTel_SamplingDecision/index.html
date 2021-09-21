@@ -14,7 +14,6 @@
             </strong>
             <span>Documentation</span>
         </a>
-        <sup>Beta</sup>
     </header>
 
     <!--
@@ -37,7 +36,9 @@
     <code class="name">OTel.​Sampling​Decision</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">SamplingDecision</span></code></pre></body></html>
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">SamplingDecision</span>  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>A decision on whether a span should be recorded/sampled.</p>
 
@@ -57,9 +58,11 @@
 
         <div role="article" class="case" id="otel.samplingdecision.drop">
     <h3>
-        <code>drop</code>
+        <code><a href="#otel.samplingdecision.drop">drop</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">drop</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">case</span> <span class="variable">drop</span></body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Don't record the span and drop all events and attributes.</p>
 
@@ -67,9 +70,11 @@
 </div>
 <div role="article" class="case" id="otel.samplingdecision.record">
     <h3>
-        <code>record</code>
+        <code><a href="#otel.samplingdecision.record">record</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">record</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">case</span> <span class="variable">record</span></body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Process the span but do not export it.</p>
 
@@ -77,9 +82,11 @@
 </div>
 <div role="article" class="case" id="otel.samplingdecision.recordandsample">
     <h3>
-        <code>record​And​Sample</code>
+        <code><a href="#otel.samplingdecision.recordandsample">record​And​Sample</a></code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">recordAndSample</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">case</span> <span class="variable">recordAndSample</span></body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Process and export the span.</p>
 
@@ -94,7 +101,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-04-17T12:47:05+0000">April 17, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-09-21T10:20:08+0000">September 21, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

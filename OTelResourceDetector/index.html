@@ -14,7 +14,6 @@
             </strong>
             <span>Documentation</span>
         </a>
-        <sup>Beta</sup>
     </header>
 
     <!--
@@ -37,13 +36,15 @@
     <code class="name">OTel​Resource​Detector</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">OTelResourceDetector</span></code></pre></body></html>
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">OTelResourceDetector</span>  </body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>A resource detector asynchronously detects attributes describing an <code>OTel.Resource</code>.</p>
 
 </div>
 <div class="discussion">
-    <aside class="seealso">
+    <aside class="see also" title="See Also">
     <p><a href="https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/resource/sdk.md#resource-creation">OTel Spec: Resource Creation</a></p>
 
 </aside>
@@ -59,7 +60,9 @@
     <h3>
         <code>detect()</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">detect</span>() -&gt; <span class="type">EventLoopFuture</span>&lt;<a href="/opentelemetry-swift/OTel"><span class="type">OTel</span></a>.<span class="type">Resource</span>&gt;</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">detect</span>() -&gt; <span class="type">EventLoopFuture</span>&lt;<a href="/opentelemetry-swift/OTel"><span class="type">OTel</span></a>.<span class="type">Resource</span>&gt;</body></html></code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Detect attributes describing the returned resource using this detector.
 If the detector does not detect any attributes, it returns an empty <code>OTel.Resource</code>.</p>
@@ -75,7 +78,7 @@ If the detector does not detect any attributes, it returns an empty <code>OTel.R
 
     <footer>
         <p>
-    Generated on <time datetime="2021-04-17T12:47:05+0000">April 17, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-09-21T10:20:08+0000">September 21, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
