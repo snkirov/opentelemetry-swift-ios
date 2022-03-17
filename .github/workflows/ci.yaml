@@ -4,53 +4,53 @@ on: [push, pull_request]
 
 jobs:
   unit-test:
+    name: Run Unit Tests
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        images:
-        - swift:5.3
-        - swift:5.4
-        - swift:5.5
-        - swiftlang/swift:nightly-master
-    container: ${{ matrix.images }}
+        swift: [5.3, 5.4, 5.5, 5.6]
     steps:
+      - name: Install Swift
+        uses: slashmo/install-swift@v0.3.0
+        with:
+          version: ${{ matrix.swift }}
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Cache Swift PM
         uses: actions/cache@v2
         with:
           path: .build
-          key: ${{ runner.os }}-${{ matrix.images }}-spm-${{ hashFiles('**/Package.resolved') }}-v2
-          restore-keys: ${{ runner.os }}-${{ matrix.images }}-spm-
+          key: ${{ runner.os }}-${{ matrix.swift }}-spm-${{ hashFiles('**/Package.resolved') }}-v2
+          restore-keys: ${{ runner.os }}-${{ matrix.swift }}-spm-
       - name: Resolve Swift dependencies
         run: swift package resolve
       - name: Build & Test
         run: swift test --enable-test-discovery --parallel
 
   compile-onboarding-example:
+    name: Compile Onboarding Example
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        images:
-        - swift:5.3
-        - swift:5.4
-        - swift:5.5
-        - swiftlang/swift:nightly-master
-    container: ${{ matrix.images }}
+        swift: [5.3, 5.4, 5.5, 5.6]
     defaults:
       run:
         working-directory: ./Examples/Onboarding
     steps:
+      - name: Install Swift
+        uses: slashmo/install-swift@v0.3.0
+        with:
+          version: ${{ matrix.swift }}
       - name: Checkout
         uses: actions/checkout@v2
       - name: Cache Swift PM
         uses: actions/cache@v2
         with:
           path: ./Examples/Onboarding/.build
-          key: ${{ runner.os }}-${{ matrix.images }}-spm-${{ hashFiles('**/Examples/Onboarding/Package.resolved') }}
-          restore-keys: ${{ runner.os }}-${{ matrix.images }}-spm-
+          key: ${{ runner.os }}-${{ matrix.swift }}-spm-${{ hashFiles('**/Examples/Onboarding/Package.resolved') }}
+          restore-keys: ${{ runner.os }}-${{ matrix.swift }}-spm-
       - name: Resolve Swift dependencies
         run: swift package resolve
       - name: Build
